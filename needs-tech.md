@@ -3,12 +3,12 @@
 Scenario: Recover across restarts of the server
 that runs the visit-counter
 
-  Given
-  When
-  Then
+  Given : There is a power shutdown
+  When : Power restarts
+  Then : Document data
 
 Scenario: Reconcile counts if the sensor is offline for a while
 
-  Given
-  When
-  Then
+  Given : The sensor that scans and counts is offline
+  When : There needs to be details of people documented
+  Then : Count the number once it restarts
